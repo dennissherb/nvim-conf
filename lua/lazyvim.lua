@@ -12,7 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- setup all the plugins
-require("lazy").setup({{import = "plugins"}, {import = "plugins.lsp"}}, {})
+require("lazy").setup(
+	{
+		{import = "plugins"},
+		{import = "plugins.lsp"}
+	},
+
+	{
+		{import = "options-d.lazyvim"}
+		-- opts go here
+	}
+)
 
 
 
